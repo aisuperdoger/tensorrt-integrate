@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/trt8cuda102cudnn8/include/**",
+                "/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/cpp-packages/opencv4.2/include/**",
+                "/home/xd2/anaconda3/envs/FairMOT/include/python3.8",
+                "ffmpeg-include/**",
+                "cuvid-include/**"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

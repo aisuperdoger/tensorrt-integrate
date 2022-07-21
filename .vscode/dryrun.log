@@ -1,0 +1,29 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/xd2/tensorrt-integrate'
+ 
+Compile depends CUDA src/ffhdd/color.cu
+ 
+Compile depends C++ src/ffhdd/simple-logger.cpp
+ 
+Compile depends C++ src/ffhdd/cuvid-decoder.cpp
+ 
+Compile depends C++ src/ffhdd/multi-camera.cpp
+ 
+Compile depends C++ src/ffhdd/ffmpeg-demuxer.cpp
+ 
+Compile depends C++ src/ffhdd/cuda-tools.cpp
+ 
+Compile depends C++ src/interface.cpp
+ 
+Compile depends C++ src/application/app_hard_decode.cpp
+ 
+Compile depends C++ src/application/app_demuxer.cpp
+ 
+Compile depends C++ src/application/app_multi_camera.cpp
+ 
+echo Compile CXX src/application/app_multi_camera.cpp
+mkdir -p objs/application/
+ 
+g++ -c src/application/app_multi_camera.cpp -o objs/application/app_multi_camera.cpp.o -std=c++11 -w -g -O0 -m64 -fPIC -fopenmp -pthread -Isrc -I/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/trt8cuda102cudnn8/include/cuda -I/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/trt8cuda102cudnn8/include/tensorRT -I/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/trt8cuda102cudnn8/include/protobuf -I/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/cpp-packages/opencv4.2/include -I/home/xd2/anaconda3/envs/FairMOT/include/python3.8 -Isrc/tensorRT -Isrc/tensorRT/common -Isrc/application -Iffmpeg-include -Icuvid-include
+make: Leaving directory '/home/xd2/tensorrt-integrate'
+ 

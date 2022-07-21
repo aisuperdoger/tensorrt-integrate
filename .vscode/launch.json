@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "cwd":"${workspaceFolder}/workspace",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "program-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/workspace/pro",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/workspace",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "environment": [
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/trt8cuda102cudnn8/lib64:/home/xd2/anaconda3/envs/FairMOT/lib:/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/trt8cuda102cudnn8/py38:/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/cpp-packages/opencv4.2/lib:/home/xd2/anaconda3/envs/FairMOT/lib/python3.8/site-packages/trtpy/lib:$LD_LIBRARY_PATH"
+                }
+            ],
+            "setupCommands": [
+                {
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build"
+        }
+    ]
+}
