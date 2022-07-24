@@ -427,4 +427,6 @@ objs/interface.cpp.o: src/interface.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/7/bits/gslice.h /usr/include/c++/7/bits/gslice_array.h \
  /usr/include/c++/7/bits/mask_array.h \
  /usr/include/c++/7/bits/indirect_array.h src/ffhdd/ffmpeg-demuxer.hpp \
- src/ffhdd/cuvid-decoder.hpp
+ src/ffhdd/cuvid-decoder.hpp src/application/save-decode-h264.hpp \
+ src/ffhdd/simple-logger.hpp src/ffhdd/ffmpeg-demuxer.hpp \
+ src/ffhdd/cuvid-decoder.hpp src/ffhdd/nalu.hpp

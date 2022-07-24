@@ -8,6 +8,10 @@ import ctypes
 import os
 
 
+# ffhdd.save_h264("rtsp://admin:a1234567@ten01.adapdo.com:6002/Streaming/Channels/102")
+sdh = ffhdd.SaveDecodeH264("rtsp://admin:a1234567@ten01.adapdo.com:6002/Streaming/Channels/102",50)
+# sdh.save_h264()
+sdh.decode_h264()
 
 demuxer = ffhdd.FFmpegDemuxer("/home/xd2/tensorrt-integrate/workspace/exp/number100.mp4")
 # rtsp://admin:a1234567@ten01.adapdo.com:6002/Streaming/Channels/102
@@ -52,16 +56,16 @@ while True:
     #     print(image.shape)
     #     cv2.imwrite(f"imgs/data_{nframe:05d}.jpg", image)
     # buf = bytearray(pbytes)
-    get_value = ctypes.cast(pdata, ctypes.py_object).value
-    print('error print')
+    # get_value = ctypes.cast(pdata, ctypes.py_object).value
+    # print('error print')
     # print("value type: ", type(get_value))
-    if flag<100:
-        flag+=1
-        with open("save.bin", "wb") as f:
-            print("-----------")
-            print("pdata: ",pdata)
-            print("value: ",get_value)
-            save_value = struct.pack('B', get_value)
+    # if flag<100:
+    #     flag+=1
+    #     with open("save.bin", "wb") as f:
+    #         print("-----------")
+    #         print("pdata: ",pdata)
+    #         print("value: ",get_value)
+    #         save_value = struct.pack('B', get_value)
             # f.write(save_value)
                 # f.write(' ')
 

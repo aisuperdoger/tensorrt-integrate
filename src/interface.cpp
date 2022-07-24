@@ -7,6 +7,7 @@
 #include "pybind11.hpp"
 #include "ffhdd/ffmpeg-demuxer.hpp"
 #include "ffhdd/cuvid-decoder.hpp"
+#include "application/save-decode-h264.hpp"
 
 using namespace std;
 using namespace cv;
@@ -129,13 +130,27 @@ private:
 	FFHDDecoder::FrameType output_frametype_;
 }; 
 
-int app_hard_decode();
+// void save_h264(string);
+// int app_hard_decode();
+
+
 int main(){
-	app_hard_decode();
+	// app_hard_decode();
+	auto sdh = SaveDecodeH264("rtsp://admin:a1234567@ten01.adapdo.com:6002/Streaming/Channels/102", 50);
+	sdh.save_h264();
+	sdh.decode_h264();
+
 	return 0;
 }
 
 PYBIND11_MODULE(libffhdd, m){
+	// m.def("save_h264", &save_h264, "save h264");
+	py::class_<SaveDecodeH264>(m, "SaveDecodeH264")
+		.def(py::init<std::string, int>())
+		.def("decode_h264",&SaveDecodeH264::decode_h264)
+		.def("save_h264",&SaveDecodeH264::save_h264)
+		;
+
 
 	py::enum_<FFHDDecoder::FrameType>(m, "FrameType")
 		.value("Unknow",   FFHDDecoder::FrameType::Unknow)
